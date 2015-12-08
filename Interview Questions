@@ -1,4 +1,23 @@
-Question
-1) Can a foreg key be NULL?
+ Question
+1) Can a foreign key be NULL?
 2) What is partitioning & Bucketing?
-3) 
+3) Sqoop related questions. If we don't use --m 1 parameter in import data statement
+Then data import with 4 mapper by default( Configuration mapred-site.xml
+4) HDP 2.3.2
+Component	Version
+Hue	2.6.1-2950
+HDP	2.3.2
+Hadoop	2.7.1
+Pig	0.15.0
+Hive-Hcatalog	1.2.1
+Oozie	4.2.0
+Ambari	2.1-377
+HBase	1.1.2
+Knox	0.6.0
+Storm	0.10.0
+
+4) What is configuration of your hadoop cluster 
+
+Namenode: 32 cores,60 GB RAM, 180GB SSD
+4 Data Nodes: 8 cores (on each data node), 30G RAM (on each data node),
+Total HDFS size 1.5 TB SSD 

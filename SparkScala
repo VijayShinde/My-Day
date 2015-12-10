@@ -1,0 +1,77 @@
+*** Scala is best language for Spark User ***
+Introduction
+
+* It is scalabale language 
+* Scala is blend of object oriented lanuges & functional programming
+
+
+Features
+1) Type inference : scala internally identifies the what type of data it is.
+Ex.
+scala> val test = 1.4f
+test: Float = 1.4
+Very intelligently idetifies data type of data
+
+2) Immutability : var is mutable, whereas val is not
+Ex.
+scala> var test =5;
+test: Int = 5
+
+scala> test =42
+test: Int = 42
+
+scala> test
+res11: Int = 42
+
+scala> val ter=90
+ter: Int = 90
+
+scala> ter=43
+<console>:21: error: reassignment to val
+       ter=43
+3) Defining your own function 
+------------------------------------------------------------------
+def myAdd(a:Int,b:Int)=a+b
+
+scala> myAdd(34,56)
+res13: Int = 90
+
+map function:
+------------------------------------------------------------------
+scala> myList.map(line => line.split("\\s"))
+res19: List[Array[String]] = List(Array(Hi, How, are, you), Array(eclerx))
+
+flatMap function:
+------------------------------------------------------------------
+scala> myList.flatMap(line => line.split("\\s"))
+res20: List[String] = List(Hi, How, are, you, eclerx)
+------------------------------------------------------------------
+// Program to add all number in list
+
+scala> val myList = List(1,2,3,4,5,6,7,8,9)
+myList: List[Int] = List(1, 2, 3, 4, 5, 6, 7, 8, 9)
+
+scala> myList.reduce((a,b)=>a+b)
+res23: Int = 45
+------------------------------------------------------------------
+// Program to find largest number in given list of integer
+
+scala> val myList = List(1,54,657,887,5,3,211)
+myList: List[Int] = List(1, 54, 657, 887, 5, 3, 211)
+
+scala> myList.reduce((a,b) => if(a>b) a else b)
+res24: Int = 887
+
+Flow -->
+a   b     a>b   a   b 
+1   54    F         54
+54  657   F         657
+657 887   F         887
+887 5     T     887
+887 3     T     887
+887 211   T     887
+
+F - False
+T - True
+So 887 is largest of all
+----------------------------

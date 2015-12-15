@@ -1,0 +1,47 @@
+Questions:
+
+
+
+
+
+file <- read.table("D:/datatoload/sam.csv",header = TRUE)
+file
+x <- c(17, 14, 4, 5, 13, 12, 10)
+x[x>10]<- 4
+x
+
+file <- read.table("hw1_data.csv",header = TRUE,sep = ",")
+colnames(file)
+rows <- nrow(file)
+
+#Extract the last 2 rows of the data frame and print them to the console. What does the output look like?
+file <- read.table("hw1_data.csv",header = TRUE,sep = ",")
+tail(file,n = 2)
+OR
+file[-2]
+# What is the value of Ozone in the 47th row?
+class(file)
+file$Ozone[47]
+
+# How many missing values are in the Ozone column of this data frame?
+sum(is.na(file$Ozone))
+-->37
+
+#What is the mean of the Ozone column in this dataset? Exclude missing values (coded as NA) from this calculation.
+mean(file$Ozone,na.rm = TRUE)
+-->42.1293
+#Extract the subset of rows of the data frame where Ozone values are above 31 and Temp values are above 90. What is the mean of Solar.R in this subset?
+file <- read.table("hw1_data.csv",header = TRUE,sep = ",")
+ozonegre31<-file$Ozone > 31
+tempgre90<-file$Temp >90
+mean(file$Solar.R[file$Ozone > 31 & file$Temp >90],na.rm = TRUE)
+--> 212.8
+#What is the mean of "Temp" when "Month" is equal to 6?
+file <- read.table("hw1_data.csv",header = TRUE,sep = ",")
+mean(file$Temp[file$Month==6],na.rm = TRUE)
+--> 79.1
+#What was the maximum ozone value in the month of May (i.e. Month = 5)?
+file <- read.table("hw1_data.csv",header = TRUE,sep = ",")
+
+maxcal<- max(file$Ozone[file$Month==5],na.rm = TRUE)
+--> 115
